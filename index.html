@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guessing Game</title>
+
+    <!-- Bootstrap and CSS here-->
+    <link rel="stylesheet" type = 'text/css' href="style.css">
+
+    <link rel='stylesheet' type='text/css' href="bootstrap.css">
+
+  </head>
+  <body>
+
+      <div id='app' class='center' class ='container'>
+
+        <div id='headers'>
+          <!-- Title and subtitles! -->
+          <h1 id='title'>The Guessing Game</h1>
+          <h3 id='subtitle'>Guess a number between 1-100 below!</h3>
+        </div>
+
+        <div id='main'>
+          <div id='input-parent'>
+            <!-- Player's guess input, and submit button -->
+            <input id='player-input' class='center' autofocus maxlength="3" placeholder="#">
+            <button id='submit' class='btn btn-success'>Go!</button>
+          </div>
+
+          <div id='guesses'>
+            <!-- unordered list of guesses -->
+            <ul id='guess-list'>
+                <li class='guess'>-</li>
+                <li class='guess'>-</li>
+                <li class='guess'>-</li>
+                <li class='guess'>-</li>
+                <li class='guess'>-</li>
+            </ul>
+          </div>
+
+          <div id="menu-btns">
+            <!-- reset and hint buttons -->
+            <button id='reset' class ='btn btn-warning'> Reset </button>
+            <button id='hint' class='btn btn-info'> Need a Hint? </button>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div id='footer' class='center'>
+        <div class='row'>
+          <div class='col-sm-4'>
+            <img src='fa-logo@2x.png'></img>
+          </div>
+
+          <div class='col-sm-4'>
+            <h4>Project by Valerie Pilossof</h4>
+          </div>
+
+          <div id='grace' class='col-sm-4'>
+            <img src='grace_hopper_academy.png'></img>
+          </div>
+
+
+        </div>
+    </div>
+      <script src="jquery.min.js"></script>
+      <script type="text/javascript" src="GuessingGame.js"></script>
+  </body>
+</html>
