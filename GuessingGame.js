@@ -77,7 +77,7 @@ function newGame(){
 
 Game.prototype.provideHint = function(){
     var hintArray = shuffle([this.winningNumber, generateWinningNumber(),generateWinningNumber()]);
-    return "The winning number is " + hintArray[0] + ", " + hintArray[1] + ", or " + hintArray[2];
+    return "The winning number is " + hintArray[0] + ", " + hintArray[1] + ", or " + hintArray[2] + ".";
 }
 
 function makeAGuess(game){
@@ -86,7 +86,7 @@ function makeAGuess(game){
     var output = game.playersGuessSubmission(guess);
     $('#title').text(output);
     if(output === 'You Win!' || output === 'You Lose.'){
-        $('#submit', '#hint').prop("disabled", true);
+        $('#submit, #hint').prop("disabled", true);
         $('#subtitle').text("Please hit 'Reset' to try again!")
     }
     else if(game.isLower()){
@@ -112,7 +112,7 @@ $(document).ready(function(){
         $("#title").text("The Guessing Game");
         $("#subtitle").text("Guess a number between 1-100 below!");
         $(".guess").text("-");
-        $('#submit', '#hint').prop("disabled", false);
+        $('#submit, #hint').prop("disabled", false);
     });
     $('#hint').click(function(){
         $('#title').text(game.provideHint());
