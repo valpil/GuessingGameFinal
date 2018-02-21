@@ -55,7 +55,7 @@ Game.prototype.checkGuess = function() {
     this.pastGuesses.push(this.playersGuess);
     $('#guess-list li:nth-child('+ this.pastGuesses.length +')').text(this.playersGuess);
     if (this.pastGuesses.length === 5){
-            return "You Lose."
+            return "You lose. The correct number was " + this.winningNumber + ".";
     }
     if (this.difference() < 10) {
             return "You're burning up!"
@@ -85,7 +85,7 @@ function makeAGuess(game){
     $('#player-input').val("");
     var output = game.playersGuessSubmission(guess);
     $('#title').text(output);
-    if(output === 'You Win!' || output === 'You Lose.'){
+    if(output === 'You Win!' || output.indexOf('You lose') !== -1) {
         $('#submit, #hint').prop("disabled", true);
         $('#subtitle').text("Please hit 'Reset' to try again!")
     }
